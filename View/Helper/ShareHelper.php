@@ -26,7 +26,7 @@ class ShareHelper extends AppHelper {
 		'twitter' => 'https://twitter.com/intent/tweet?',
 		'googleplus' => 'https://plus.google.com/share?',
 		'facebook' => 'https://www.facebook.com/sharer/sharer.php?',
-		'linkedin' => 'http://www.linkedin.com/shareArticle?mini=true&',
+		'linkedin' => 'https://www.linkedin.com/shareArticle?mini=true&',
 		'pinterest' => 'https://www.pinterest.com/pin/create/button/?',
 	);
 	
