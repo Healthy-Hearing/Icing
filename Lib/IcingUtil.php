@@ -349,7 +349,6 @@ class IcingUtil extends Object {
 	 * 					www bool
 	 * 					strip_www bool
 	 * 					add_www bool
-	 * 					add_http bool
 	 */
 	static function cleanlink($link,$settings=null) {
 		if (is_bool($settings)) {
@@ -384,16 +383,7 @@ class IcingUtil extends Object {
 				}
 			}
 		}
-		if (isset($settings['add_http']) && !empty($settings['add_http'])) {
-			if (strpos('://',$link)===false) {
-				$link = 'http://'.$link;
-			}
-		}
 		$link = str_replace('www.www.','www.',$link);
-		if (strpos($link,'/http://') !== false) {
-			// url like: http://www.healthyhearing.com/http://www.healthyhearing.com/something
-			$link = substr($link,strpos($link,'/http://')+1);
-		}
 		// done
 		return $link;
 	}
